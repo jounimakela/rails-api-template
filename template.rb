@@ -23,4 +23,5 @@ after_bundle do
 
   rails_command("db:create")
   rails_command("db:migrate")
+  rails_command("db:migrate", env: 'test')
 end
