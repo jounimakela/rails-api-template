@@ -3,6 +3,7 @@ source_paths.unshift(File.dirname(__FILE__))
 
 copy_file 'Gemfile', force: true
 copy_file 'README.md', force: true
+copy_file 'gitignore', '.gitignore'
 
 apply 'app/template.rb'
 apply 'config/template.rb'
