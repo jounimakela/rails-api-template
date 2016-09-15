@@ -16,4 +16,11 @@ after_bundle do
   generate 'rspec:install'
   remove_file 'test'
   apply 'spec/template.rb'
+
+  git :init
+  git add: "."
+  git commit: %Q{ -m 'Initial commit' }
+
+  rails_command("db:create")
+  rails_command("db:migrate")
 end
