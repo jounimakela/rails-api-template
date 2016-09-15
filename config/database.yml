@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: $TEMPLATE_development
+
+test:
+  <<: *default
+  database: $TEMPLATE_test
+
+production:
+  <<: *default
+  database: $TEMPLATE_production
+  username: $TEMPLATE
+  password: $TEMPLATE
