@@ -19,10 +19,10 @@ after_bundle do
   apply 'spec/template.rb'
 
   git :init
-  git add: "."
-  git commit: %Q{ -m 'Initial commit' }
+  git add: '.'
+  git commit: %( -m 'Initial commit' )
 
-  rails_command("db:create")
-  rails_command("db:migrate")
-  rails_command("db:migrate", env: 'test')
+  rails_command('db:create')
+  rails_command('db:migrate')
+  rails_command('db:migrate', env: 'test')
 end

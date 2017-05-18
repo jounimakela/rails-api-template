@@ -26,6 +26,6 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
 
   config.expect_with :rspec do |c|
-    c.syntax = [:should, :expect]
+    c.syntax = %i[should expect]
   end
 end

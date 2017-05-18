@@ -6,4 +6,3 @@ class LogFormatter < Logger::Formatter
     "[#{time.strftime('%F %T.%4N')}] [#{uuid}] #{severity.ljust(5)} --: #{message}\n"
   end
 end
-
