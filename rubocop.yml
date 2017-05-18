@@ -1,0 +1,106 @@
+# To fix the 'Prefer single quoted...'
+#   Search for   "([^{"']*)"
+#   Replace with '$1'
+#
+# To fix Ruby 1.9 hash syntax
+#   Search for      {:(\w+) =>
+#   Replace with    { $1:
+#   Search for      :(\w+) =>
+#   Replace with    $1:
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'lib/payment_providers/every_day/every_day.rb'
+    - 'bin/**/*'
+  TargetRubyVersion: 2.3
+
+Documentation:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 119
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/NestedTernaryOperator:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Description: >-
+                 Use %r for regular expressions matching more than
+                 `MaxSlashes` '/' characters.
+                 Use %r only for regular expressions matching more than
+                 `MaxSlashes` '/' character.
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#percent-r'
+  Enabled: false
+
+Lint/AmbiguousRegexpLiteral:
+  Description: >-
+                 Checks for ambiguous regexp literals in the first argument of
+                 a method invocation without parenthesis.
+  Enabled: false
+
+Lint/EndAlignment:
+  Enabled: false
+
+ClassLength:
+  Max: 400
+
+Style/EachWithObject:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+SpaceBeforeFirstArg:
+  Enabled: false
+
+BlockDelimiters:
+  Enabled: false
+
+SpaceInsideStringInterpolation:
+  Enabled: false
+
+Style/IndentArray:
+  Enabled: true
+  EnforcedStyle: consistent
+
+Style/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+  IndentationWidth: 19A
+
+Style/MultilineOperationIndentation:
+  EnforcedStyle: aligned # indented # aligned
+
+Style/SignalException:
+  EnforcedStyle: semantic
+
+Style/NestedParenthesizedCalls:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
