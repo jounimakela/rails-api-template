@@ -47,5 +47,5 @@ Rails.application.configure do
   logger.formatter = LogFormatter.new
   config.logger    = ActiveSupport::TaggedLogging.new(logger)
   config.log_tags  = [:uuid]
+  config.log_level = :debug
 end
-
