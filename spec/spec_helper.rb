@@ -12,6 +12,6 @@ RSpec.configure do |config|
   config.before(:all) do
     # NOTE: Comment this line if you need to want errors to stdout instead of test.log
     #       This also breaks binding.pry
-    $stdout = File.new(Rails.root.join('log', 'test.log'), 'w')
+    # $stdout = File.new(Rails.root.join('log', 'test.log'), 'w')
   end
 end
