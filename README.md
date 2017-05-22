@@ -11,8 +11,10 @@ git clone https://github.com/pabn1/rails-api-template.git
 
 Create new rails project.
 ```
-rails new projectname -m rails-api-template/template.rb --api
+rails new projectname -m rails-api-template/template.rb
 ```
+
+Note: --api switch is no longer required, the template will apply same things as the --api switch.
 
 ## Features
 

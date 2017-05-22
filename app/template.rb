@@ -3,3 +3,4 @@ copy_file 'app/views/error.json.jbuilder', force: true
 
 remove_file 'app/channels'
 remove_file 'app/mailers'
+remove_file 'app/assets'
