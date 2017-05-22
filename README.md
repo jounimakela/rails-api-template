@@ -22,6 +22,6 @@ Gemset contains:
 * Rails 5, postgres, puma
 * JBuilder
 * FactoryGirl and RSpec
-
 * Removed less frequently used framework parts in `config/application.rb`
 * Prettier logs
+* Deploys to heroku out of the box
