@@ -18,11 +18,11 @@ after_bundle do
   remove_file 'test'
   apply 'spec/template.rb'
 
-  git :init
-  git add: '.'
-  git commit: %( -m 'Initial commit' )
-
   rails_command('db:create')
   rails_command('db:migrate')
   rails_command('db:migrate', env: 'test')
+
+  git :init
+  git add: '.'
+  git commit: %( -m 'Initial commit' )
 end
