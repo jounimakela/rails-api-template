@@ -5,12 +5,6 @@ gem 'pg'
 gem 'puma', '~> 3.0'
 gem 'rails', '~> 5.1.0'
 
-# Uncomment the gem and run ..
-#   rails g delayed_job:active_record
-#   rails db:migrate
-# .. to install
-# gem 'delayed_job_active_record'
-
 group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
