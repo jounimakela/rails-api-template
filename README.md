@@ -19,9 +19,11 @@ Note: --api switch is no longer required, the template will apply same things as
 ## Features
 
 Gemset contains:
-* Rails 5, postgres, puma
+* Rails 5.1, postgres, puma
 * JBuilder
-* FactoryGirl and RSpec
+* FactoryGirl and rspec
+
+Other notable things:
 * Removed less frequently used framework parts in `config/application.rb`
 * Prettier logs
 * Deploys to heroku out of the box
