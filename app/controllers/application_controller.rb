@@ -1,11 +1,10 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::API
   protected
 
-  # Usage: return status_and_log :bad_request, 'A parameter was missing'
-  def status_and_log(status, message)
-    @description = message
+  def render_error(message, status: :bad_request)
     Rails.logger.warn { message }
-
     render json: { error: message }, status: status
   end
 end
