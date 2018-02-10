@@ -1,10 +1,14 @@
 Rails.application.config.generators do |g|
-  g.stylesheets     false
-  g.javascripts     false
+  g.template_engine   nil
+  g.stylesheet_engine nil
 
-  g.helper          false
-  g.helper_specs    false
+  g.assets            false
+  g.stylesheets       false
+  g.javascripts       false
 
-  g.views           false
-  g.view_specs      false
+  g.helper            false
+  g.helper_specs      false
+
+  g.views             false
+  g.view_specs        false
 end
