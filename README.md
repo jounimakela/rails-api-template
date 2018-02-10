@@ -20,8 +20,7 @@ Note: --api switch is no longer required, the template will apply same things as
 
 Gemset contains:
 * Rails 5.1, postgres, puma
-* JBuilder
-* FactoryGirl and rspec
+* FactoryGirl
 
 Other notable things:
 * Removed less frequently used framework parts in `config/application.rb`

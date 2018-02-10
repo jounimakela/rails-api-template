@@ -1,7 +1,10 @@
 Rails.application.config.generators do |g|
-  g.template_engine :jbuilder
   g.stylesheets     false
   g.javascripts     false
-  g.view_specs      false
+
+  g.helper          false
   g.helper_specs    false
+
+  g.views           false
+  g.view_specs      false
 end

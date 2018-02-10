@@ -5,6 +5,7 @@ class ApplicationController < ActionController::API
   def status_and_log(status, message)
     @description = message
     Rails.logger.warn { message }
-    render template: 'error', status: status
+
+    render json: { error: message }, status: status
   end
 end

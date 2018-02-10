@@ -14,10 +14,6 @@ after_bundle do
   # Workaround to prevent spring from hanging
   run 'spring stop'
 
-  generate 'rspec:install'
-  remove_file 'test'
-  apply 'spec/template.rb'
-
   rails_command('db:create')
   rails_command('db:migrate')
   rails_command('db:migrate', env: 'test')

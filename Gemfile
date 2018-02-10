@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'jbuilder', '~> 2.5'
 gem 'pg'
 gem 'puma', '~> 3.0'
 gem 'rails', '~> 5.1.0'
@@ -16,5 +15,4 @@ end
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry-rails'
-  gem 'rspec-rails'
 end
