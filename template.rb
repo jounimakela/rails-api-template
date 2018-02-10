@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Add the current directory to the path Thor uses to look up files
 source_paths.unshift(File.dirname(__FILE__))
 
