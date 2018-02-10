@@ -1,20 +1,10 @@
-# To fix the 'Prefer single quoted...'
-#   Search for   "([^{"']*)"
-#   Replace with '$1'
-#
-# To fix Ruby 1.9 hash syntax
-#   Search for      {:(\w+) =>
-#   Replace with    { $1:
-#   Search for      :(\w+) =>
-#   Replace with    $1:
 AllCops:
   Exclude:
-    - 'vendor/**/*'
-    - 'db/**/*'
-    - 'config/**/*'
-    - 'lib/payment_providers/every_day/every_day.rb'
     - 'bin/**/*'
-  TargetRubyVersion: 2.3
+    - 'config/environments/*'
+    - 'db/**/*'
+    - 'vendor/**/*'
+  TargetRubyVersion: 2.5
 
 Documentation:
   Enabled: false
@@ -61,9 +51,6 @@ Lint/AmbiguousRegexpLiteral:
                  a method invocation without parenthesis.
   Enabled: false
 
-Lint/EndAlignment:
-  Enabled: false
-
 ClassLength:
   Max: 400
 
@@ -85,22 +72,27 @@ BlockDelimiters:
 SpaceInsideStringInterpolation:
   Enabled: false
 
-Style/IndentArray:
+Layout/IndentArray:
   Enabled: true
   EnforcedStyle: consistent
 
-Style/MultilineMethodCallIndentation:
+Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
-  IndentationWidth: 19A
 
-Style/MultilineOperationIndentation:
-  EnforcedStyle: aligned # indented # aligned
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: aligned
 
 Style/SignalException:
   EnforcedStyle: semantic
 
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+Style/WordArray:
+  EnforcedStyle: brackets
+
 Style/NestedParenthesizedCalls:
   Enabled: false
 
-Style/FrozenStringLiteralComment:
-  Enabled: false
+Rails:
+  Enabled: true
