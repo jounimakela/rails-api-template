@@ -19,6 +19,8 @@ after_bundle do
   rails_command('db:migrate')
   rails_command('db:migrate', env: 'test')
 
+  run 'rubocop -a'
+
   git :init
   git add: '.'
   git commit: %( -m 'Initial commit' )
