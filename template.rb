@@ -9,6 +9,7 @@ copy_file 'rubocop.yml', '.rubocop.yml', force: true
 apply 'app/template.rb'
 apply 'config/template.rb'
 apply 'lib/template.rb'
+apply 'test/template.rb'
 
 after_bundle do
   # Workaround to prevent spring from hanging
