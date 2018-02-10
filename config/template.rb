@@ -9,6 +9,8 @@ copy_file 'config/environments/development.rb', force: true
 copy_file 'config/environments/production.rb', force: true
 copy_file 'config/environments/test.rb', force: true
 
+remove_file 'config/cable.yml'
+
 # Replace $TEMPLATE with the proper project name
 gsub_file 'config/application.rb', '$TEMPLATE', @app_name.to_s.tr('-', '_').camelize
 gsub_file 'config/database.yml', '$TEMPLATE', @app_name.to_s.tr('-', '_').underscore
