@@ -1,11 +1,13 @@
-/log
-/tmp
-/spec/tmp
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
 
 .DS_Store
 
 config/initializers/secret_token.rb
 
-## Environment normalisation:
+## Environment normalization:
 /.bundle
 /vendor/bundle
